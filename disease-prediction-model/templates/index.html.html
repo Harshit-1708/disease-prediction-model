@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disease Prediction Model</title>
+</head>
+<body>
+    <h1>Disease Prediction Model</h1>
+    <form method="POST">
+        {% for symptom in symptoms %}
+            <label for="{{ symptom }}">{{ symptom.replace('_', ' ') }}:</label>
+            <input type="text" id="{{ symptom }}" name="{{ symptom }}" placeholder="Enter symptom or None"><br><br>
+        {% endfor %}
+        <button type="submit">Predict Disease</button>
+    </form>
+</body>
+</html>
