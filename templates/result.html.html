@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+</head>
+<body>
+    <h1>Predicted Disease:</h1>
+    <h2>{{ disease }}</h2>
+
+    <h3>Recommended Precautions:</h3>
+    <ul>
+        {% for precaution in precautions %}
+            <li>{{ precaution }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Symptom Details:</h3>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <tr>
+            <th>Symptom</th>
+            <th>Description</th>
+            <th>Severity</th>
+        </tr>
+        {% for s, d, sev in symptom_info %}
+        <tr>
+            <td>{{ s }}</td>
+            <td>{{ d }}</td>
+            <td>{{ sev }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/">Try again</a>
+</body>
+</html>
