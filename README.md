@@ -1,4 +1,4 @@
-# Disease Prediction Model
+## Disease Prediction Model
 
 This Flask web app uses machine learning to predict diseases based on symptoms. It also provides symptom descriptions, severities, and recommended precautions.
 
